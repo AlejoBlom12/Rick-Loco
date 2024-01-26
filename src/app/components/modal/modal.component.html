@@ -1,0 +1,46 @@
+<div class="modal-overlay" (click)="cerrarModal($event)">
+    <div class="modal-content rick-and-morty-modal">
+      <div class="modal-header">
+        <h5 class="modal-title text-1"> <strong> {{ detalles.name }} </strong></h5>
+        <button type="button" (click)="cerrar()" class="btn btn-outline-light btn-dark">Back</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img [src]="detalles.image" class="img-fluid" alt="{{ detalles.name }}">
+        </div>
+        <div class="modal-info">
+            <div>
+                <p class="detail-title float-start"> <strong>Gender:</strong></p><p class="detail text-center">{{ detalles.gender }} </p>
+            </div>
+            <div>
+                <p class="detail-title float-start"> <strong>Species:</strong> </p> <p class="detail  text-center">{{ detalles.species }}</p>
+            </div>
+            <div>
+                <p class="detail-title float-start"><strong>Type:</strong> </p> <p class="detail  text-center"> {{ detalles.type ? detalles.type : 'Unknown' }}</p>
+            </div>
+            <div>
+                <small class=" generated-text detail-1 ">{{ detalles.created | date }}</small>
+            </div>
+        </div>
+      </div>
+      <div class="details-box">
+        <div class="origin-box">
+                <h6><strong class="text-2">Origin: </strong></h6>
+                <p class="text-muted detail-title"> {{ detalles.origin.name }}</p>
+        </div>
+        <div class="origin-box">
+          <h6><strong class="text-2">Location: </strong></h6>
+          <p class="text-muted detail-title">{{ detalles.location.name }}</p>
+        </div>
+        <div class="card episode-box">
+            <h6> <strong class="text-2"> Appeared in the episode:</strong></h6>
+          <ul class="episode-list">
+            <li *ngFor="let episodioUrl of detalles.episode">
+              <strong class="text-muted detail-1 ">-Episode: {{ getEpisodeNumber(episodioUrl) }}</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  

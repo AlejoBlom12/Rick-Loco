@@ -1,0 +1,176 @@
+.modal-overlay {
+    margin-top: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+}
+
+    .modal-content {
+        transition: transform 0.3s ease;
+     }
+
+  .modal-content {
+    background-image: url('../../../assets/1706301713259.gif');
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 60%;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-title {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .close-button {
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #78a952;
+  }
+  
+  .modal-body {
+    display: flex;
+  }
+  
+  .modal-image {
+    margin-right: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+  .modal-info {
+    flex-grow: 1;
+    background-color: #418e44a3; 
+    padding: 20px; 
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+  
+  .modal-info p {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .details-box {
+    margin-top: 20px;
+  }
+  
+  .origin-box, .episode-box {
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: #ffffffb8; 
+  }
+  
+  .origin-box h6, .episode-box h6 {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .origin-box p, .episode-box p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .episode-list {
+    list-style: none;
+    padding: 0;
+    column-count: 3;
+    column-gap: 20px;
+  }
+  
+  .episode-box li {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+  
+  
+  @media (max-width: 767px) {
+    .episode-list {
+      column-count: 1;
+    }
+  }
+
+  .detail-title {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 30 px;
+    color: #000000;
+
+  }
+
+  .detail {
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black
+  }
+
+  .detail-1{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .generated-text {
+    position:absolute;
+    bottom: 10px; 
+    left: 10px; 
+    color: #000000; 
+    font-size: 12px; 
+  }
+
+  .text-1 {
+    color: #ffffff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+  .text-2 {
+    color: #000000;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+  }
+  
+  .modal-content {
+    animation: fadeEffect 0.5s;
+  }
+  
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
